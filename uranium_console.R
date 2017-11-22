@@ -4,6 +4,7 @@ simulation <- function(n=200, dt=0.01, sleep=0.07, bomb=0.1*n) {
 	#n: number of particles
 	#dt: time in particles' system between two successive frames
 	#sleep: real time between two successive frames
+	#in case of problem with performance increase sleep time
 	#bomb: lowest limit of mass for particle to explode
 	
 	l<-10;k<-2;border<-l+0.1*l;limit.q<-l/2;limit.v<-l/2;E<-0.5
