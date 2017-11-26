@@ -69,10 +69,8 @@ void fusion(NumericVector &x, NumericVector &y, NumericVector &vx,
         vy[largest] = vyf;
         m[largest] = mf;
         m[smallest] = 0;
-        vx[smallest] = 0;
-        vy[smallest] = 0;
-        x[smallest] = 2*l;                    //(2l,2l) is point of garbage
-        y[smallest] = 2*l;
+        vx[smallest] = vy[smallest] = 0;
+        x[smallest] = y[smallest] = 2*l;                    //(2l,2l) is point of garbage
         e[smallest] = 0;
       }
     }
@@ -92,11 +90,9 @@ void blust(NumericVector &x, NumericVector &y, NumericVector &vx,
         double vyi = vy[i];
         double xi = x[i];
         double yi = y[i];
+        x[i] = y[i] = 2*l;
+        vx[i] = vy[i] = 0;
         m[i] = 0;
-        vx[i] = 0;
-        vy[i] = 0;
-        x[i] = 2*l;
-        y[i] = 2*l;
         e[i] = 0;
         for(int j = 0; j < mi; ++j) {
           int posj =  find(e, 0);
