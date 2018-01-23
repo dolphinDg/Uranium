@@ -1,10 +1,11 @@
 library("Rcpp")
-sourceCpp("/Users/Mikhail/Documents/ProgrammingI/R/Uranium/uranium.cpp")
+#path to your uranium.cpp
+sourceCpp("/Users/Documents/R/Uranium/uranium.cpp")
 
 simulation <- function(times, folder, n=200, dt=0.01, bomb=0.1*n) {
 	#times: number of pictures
 	#folder: path to folder where images and gif will be created
-		#format: /Users/Documents/Uranium/
+		#format: "/Users/Documents/Uranium/"
 		#Warning: last forward slash is necessary!
 	#n: number of particles
 	#dt: time in particles' system between two successive pictures
