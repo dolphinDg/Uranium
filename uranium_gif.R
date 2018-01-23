@@ -63,7 +63,7 @@ simulation <- function(times, folder, n=200, dt=0.01, bomb=0.1*n) {
 	
 	close(progress_bar)
 	cat("Assembling gif...\n")
-	#to be implementated
+	#to be implemented
 	#automatically create gif and delete pictures
 	#system("convert -delay 5 *.png uranium.gif")
 	#file.remove(list.files(pattern=".png"))
